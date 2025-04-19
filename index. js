@@ -1,0 +1,11 @@
+const { Telegraf } = require('telegraf');
+
+const bot = new Telegraf('YOUR_BOT_TOKEN');  // 8198582122:AAGRpLuDzxe5lQdeLKA3QrQgTFkUK0HiykA
+
+bot.start((ctx) => ctx.reply('Salom! Men ishga tushdim.'));
+bot.help((ctx) => ctx.reply('Savolingiz bormi?'));
+bot.on('text', (ctx) => ctx.reply(`Siz yozdingiz: ${ctx.message.text}`));
+
+bot.launch();
+
+console.log('Bot ishga tushdi');
